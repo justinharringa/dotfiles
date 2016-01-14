@@ -1,6 +1,7 @@
 ### Additional setup if not already set up
 
 1. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
   #### via curl
   ```shell
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -10,6 +11,7 @@
   sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
   ```
 2. Install bullet-train theme
+
   ```shell
   wget -P ~/.oh-my-zsh/themes/ http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
   ```
