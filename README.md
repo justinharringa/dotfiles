@@ -1,3 +1,12 @@
+# A quick note from Justin Harringa
+
+This is a forked repo from Zach Holman. I had read [his post about how dotfiles are meant to be cloned](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/)
+and loved the idea. I looked at his dotfiles as well as some others and decided I'd just 
+go ahead and start with his because I liked the structure and how you maintain it.
+
+I have customized this primarily by adding oh-my-zsh, iTerm2, and changing 
+some OSX defaults (see 72ff9fe).
+
 # holman does dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
