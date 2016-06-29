@@ -1,0 +1,1 @@
+export BULLETTRAIN_RUBY_SHOW=false
