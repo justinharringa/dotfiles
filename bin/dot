@@ -7,7 +7,10 @@
 export ZSHDOT=$HOME/.dotfiles
 
 # Set OS X defaults
-$ZSHDOT/osx/set-defaults.sh
+if [ "$(uname -s)" == "Darwin" ]
+then
+  $ZSHDOT/osx/set-defaults.sh
+fi
 
 # Install homebrew
 $ZSHDOT/homebrew/install.sh 2>&1
