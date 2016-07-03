@@ -4,8 +4,6 @@ export ZSHDOT=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/ws
 
-eval $(docker-machine env dev)
-
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
