@@ -92,3 +92,5 @@ defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -boo
 defaults write com.google.Chrome AppleEnableMouseSwipeNavigateWithScrolls -bool false
 defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls -bool false
 
+# TextEdit should be plain text... I've got plenty of other rich text options
+defaults write com.apple.TextEdit RichText -int 0
