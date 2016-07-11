@@ -94,3 +94,7 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 
 # TextEdit should be plain text... I've got plenty of other rich text options
 defaults write com.apple.TextEdit RichText -int 0
+
+# Autohide user dock
+defaults write ~/Library/Preferences/com.apple.dock autohide -int 1
+killall Dock
