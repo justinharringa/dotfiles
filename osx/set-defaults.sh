@@ -96,5 +96,5 @@ defaults write com.google.Chrome.canary AppleEnableMouseSwipeNavigateWithScrolls
 defaults write com.apple.TextEdit RichText -int 0
 
 # Autohide user dock
-defaults write ~/Library/Preferences/com.apple.dock autohide -int 1
-killall Dock
+defaults write com.apple.dock autohide -int 1
+osascript -e 'tell application "Dock" to quit'
