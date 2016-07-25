@@ -1,0 +1,12 @@
+{
+  "Profiles": [
+    {
+      "Name" : "transparent",
+      "Transparency" : 0.272970599112426,
+      "Guid" : "transparent",
+      "Normal Font" : "DroidSansMonoDottedForPowerline 12",
+      "Non Ascii Font" : "DroidSansMonoDottedForPowerline 12",
+      "Terminal Type" : "xterm-256color",
+    }
+  ]
+}
