@@ -21,7 +21,7 @@ chflags nohidden ~/Library
 
 # Set a really fast key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 # Use all F1, F2, etc. keys as standard function keys
 defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
