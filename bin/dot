@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #
 # dot
 #
@@ -6,10 +6,10 @@
 # to make sure you're on the latest and greatest.
 export ZSHDOT=$HOME/.dotfiles
 
-# Set OS X defaults
+# Set macOS defaults
 if [ "$(uname -s)" == "Darwin" ]
 then
-  $ZSHDOT/osx/set-defaults.sh
+  $ZSHDOT/macos/set-defaults.sh
 fi
 
 # Install homebrew
