@@ -1,0 +1,13 @@
+{
+  "Profiles": [
+    {
+      "Name" : "transparent-w-host-badge",
+      "Transparency" : 0.272970599112426,
+      "Guid" : "transparent-w-host-badge",
+      "Normal Font" : "DroidSansMonoDottedForPowerline 12",
+      "Non Ascii Font" : "DroidSansMonoDottedForPowerline 12",
+      "Terminal Type" : "xterm-256color",
+      "Badge Text" : "\\(session.hostname)",
+    }
+  ]
+}
