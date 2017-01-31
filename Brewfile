@@ -28,6 +28,7 @@ brew 'yarn'
 brew 'youtube-dl'
 
 cask 'atom'
+cask 'caffeine'
 cask 'firefox'
 cask 'google-chrome'
 cask 'handbrake'
