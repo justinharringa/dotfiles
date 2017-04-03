@@ -1,0 +1,13 @@
+{
+  "Profiles": [
+    {
+      "Name" : "presentation",
+      "Transparency" : 0,
+      "Guid" : "presentation",
+      "Normal Font" : "DroidSansMonoDottedForPowerline 36",
+      "Non Ascii Font" : "DroidSansMonoDottedForPowerline 36",
+      "Terminal Type" : "xterm-256color",
+      "Badge Text" : "\\(session.hostname)",
+    }
+  ]
+}
