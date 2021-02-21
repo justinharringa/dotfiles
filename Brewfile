@@ -30,6 +30,7 @@ brew 'wget'
 brew 'yarn'
 brew 'youtube-dl'
 
+cask 'adoptopenjdk'
 cask 'caffeine'
 cask 'firefox'
 cask 'google-chrome'
