@@ -1,1 +1,1 @@
-alias intellij="open -a IntelliJ\ IDEA\ 15"
+alias intellij='open -na "IntelliJ IDEA.app"'
