@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 tap 'puma/puma'
 
 brew 'ack'
+brew 'autojump'
 brew 'coreutils'
 brew 'go'
 brew 'grc'

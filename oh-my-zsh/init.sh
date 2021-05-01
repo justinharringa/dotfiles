@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="bullet-train"
 
-plugins=(git colorize vagrant brew osx colored-man-pages docker mvn npm sbt urltools aws github rvm ruby gem rake)
+plugins=(git colorize vagrant brew osx colored-man-pages docker mvn npm sbt urltools aws github rvm ruby gem rake autojump)
 
 source $ZSH/oh-my-zsh.sh
 
