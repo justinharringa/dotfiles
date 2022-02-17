@@ -14,7 +14,7 @@ brew 'jp2a'
 brew 'jq'
 brew 'kubectl'
 brew 'kubectx'
-brew 'libcaca', args: ['with-imlib2']
+brew 'libcaca'
 brew 'libgit2'
 brew 'openssl'
 brew 'node'
