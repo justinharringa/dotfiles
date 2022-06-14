@@ -22,3 +22,4 @@ brew 'wget'
 
 cask 'caffeine'
 cask 'iterm2'
+cask 'visual-studio-code'
