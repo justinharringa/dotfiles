@@ -1,5 +1,12 @@
 ### Additional setup if not already set up
 
+1. Select Powerline in iTerm2
+  * iTerm2 -> Preferences -> Profiles -> Text: should be set to Droid Sans Mono Dotted for Powerline
+2. Pick Window Transparency
+  * iTerm2 -> Preferences -> Profiles -> Window -> Transparency: 23
+
+#### Automated... Previously not automated
+
 1. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
   #### via curl
@@ -13,8 +20,6 @@
 2. Install bullet-train theme
 
   ```shell
-  wget -P ~/.oh-my-zsh/themes/ http://raw.github.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
+  curl --silent -o ~/.oh-my-zsh/themes/bullet-train.zsh-theme https://raw.githubusercontent.com/justinharringa/bullet-train.zsh/master/bullet-train.zsh-theme
   ```
 3. Powerline fonts installed: https://github.com/powerline/fonts
-  * iTerm2 -> Preferences -> Profiles -> Text: should be set to Droid Sans Mono Dotted for Powerline
-  * iTerm2 -> Preferences -> Profiles -> Report Terminal Type: set to xterm-256color
