@@ -1,6 +1,6 @@
 #!/bin/sh
 # 
-# Set JAVA_HOME for macOS
+# Set jdk for macOS - https://github.com/AdoptOpenJDK/homebrew-openjdk#switch-between-different-jdk-versions
 if test "$(uname)" = "Darwin"
 then
   jdk() {
@@ -8,5 +8,4 @@ then
     export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
     java -version
   }
-  export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 fi
