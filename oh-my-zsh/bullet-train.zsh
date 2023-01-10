@@ -14,4 +14,5 @@ export BULLETTRAIN_PROMPT_ORDER=(
   kctx
   cmd_exec_time
 )
-
+export BULLETTRAIN_GO_FG=black
+export BULLETTRAIN_KCTX_BG=blue

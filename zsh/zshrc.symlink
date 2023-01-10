@@ -38,24 +38,6 @@ do
   source $file
 done
 
-export BULLETTRAIN_PROMPT_ORDER=(
-    time
-    status
-    custom
-    context
-    dir
-    screen
-    virtualenv
-    aws
-    go
-    rust
-    elixir
-    git
-    hg
-    cmd_exec_time
-  )
-export BULLETTRAIN_GO_FG=black
-
 source $ZSHDOT/oh-my-zsh/init.sh
 
 unset config_files
