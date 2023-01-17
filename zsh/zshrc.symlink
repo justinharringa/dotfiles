@@ -29,7 +29,12 @@ do
 done
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
+## 1. zsh-completions/zsh-syntax-highlighting loading
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+fi
+
+autoload -Uz compinit
 compinit
 
 # load every completion after autocomplete loads
