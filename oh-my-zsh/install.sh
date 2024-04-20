@@ -9,6 +9,3 @@ fi
 
 # Install bullet-train
 curl --silent -o ~/.oh-my-zsh/themes/bullet-train.zsh-theme https://raw.githubusercontent.com/justinharringa/bullet-train.zsh/master/bullet-train.zsh-theme
-
-# Install powerlevel10k
-git clone --depth=1 https://github.com/justinharringa/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
