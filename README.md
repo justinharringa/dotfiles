@@ -7,6 +7,8 @@ go ahead and start with his because I liked the structure and how you maintain i
 I have customized this primarily by adding oh-my-zsh, iTerm2, and changing 
 some OSX defaults (see 72ff9fe).
 
+NOTE: You'll want to restart to get all of the macOS settings (especially key repeat)
+
 # holman does dotfiles
 
 Your dotfiles are how you personalize your system. These are mine.
