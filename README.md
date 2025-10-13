@@ -57,13 +57,15 @@ There's a few special files in the hierarchy.
 
 ## install
 
-Run this:
-
-```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-script/bootstrap
-```
+1. Open Terminal
+2. Install Developer Tools to get `git`
+   - `xcode-select --install`
+3. Install `dotfiles` by running:
+    ```sh
+    git clone https://github.com/justinharringa/dotfiles.git ~/.dotfiles
+    cd ~/.dotfiles
+    script/bootstrap
+    ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.

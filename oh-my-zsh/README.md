@@ -1,4 +1,8 @@
-### Additional setup if not already set up
+# Oh-My-Zsh
+
+This has all been automated and we're using [Ghostty](https://ghostty.org/) and [powerlevel10k](https://github.com/romkatv/powerlevel10k) now.
+
+### (old) Additional setup if not already set up
 
 1. Select Powerline in iTerm2
   * iTerm2 -> Preferences -> Profiles -> Text: should be set to Droid Sans Mono Dotted for Powerline
@@ -8,7 +12,7 @@
 Shall we consider Nerd fonts from powerlevel10k? https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k
 Otherwise just run `p10k configure`
 
-#### Automated... Previously not automated
+#### (old) Automated... Previously not automated
 
 1. Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 

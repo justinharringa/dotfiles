@@ -1,5 +1,5 @@
 # Install oh-my-zsh
-if [ ! -d ~/.oh-my-zsh ]
+if [ ! -f ~/.oh-my-zsh/oh-my-zsh.sh ]
 then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   # oh-my-zsh likes to take over .zshrc - we're covering its bases already elsewhere
@@ -9,3 +9,8 @@ fi
 
 # Install bullet-train
 curl --silent -o ~/.oh-my-zsh/themes/bullet-train.zsh-theme https://raw.githubusercontent.com/justinharringa/bullet-train.zsh/master/bullet-train.zsh-theme
+
+# Install powerlevel10k
+if [ ! -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" ]; then
+  git clone --depth=1 https://github.com/justinharringa/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+fi

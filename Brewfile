@@ -1,7 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/bundle'
-
 brew 'ack'
 brew 'autojump'
 brew 'bat'
@@ -23,7 +21,9 @@ brew 'pipx'
 brew 'poetry'
 brew 'roundup'
 brew 'spark'
+brew 'tmux'
 brew 'wget'
 
+cask '1password-cli'
 cask 'caffeine'
 cask 'ghostty'
