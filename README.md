@@ -80,6 +80,17 @@ defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
 
+## machine-local topics
+
+If you have topic folders that are machine-specific or work-specific and shouldn't appear in the public repo, add them to `.git/info/exclude` rather than `.gitignore`. That file is never committed, so it won't leak into the public repo. The folder will still be picked up automatically by the shell like any other topic folder.
+
+## post-install (manual steps)
+
+A few things can't be automated and need to be done once on each new machine:
+
+- **Restart** after running `bin/dot` to apply all macOS settings (especially key repeat).
+- **1Password shell plugins**: After signing into 1Password and the CLI, run `op plugin init <tool>` for each CLI tool you want 1Password to manage credentials for (e.g. `op plugin init gh`). This generates `~/.config/op/plugins.sh`, which is sourced automatically by your shell once it exists.
+
 ## bugs
 
 I want this to work for everyone; that means when you clone it down it should
