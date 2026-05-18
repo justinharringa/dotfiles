@@ -6,7 +6,7 @@ fpath=($ZSHDOT/functions $fpath)
 autoload -U $ZSHDOT/functions/*(:t)
 
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
+HISTSIZE=75000
 SAVEHIST=10000
 
 setopt NO_BG_NICE # don't nice background tasks
