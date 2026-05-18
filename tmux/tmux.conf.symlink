@@ -1,0 +1,36 @@
+# Symlinked to ~/.tmux.conf by script/bootstrap.
+
+# --- Mouse ---------------------------------------------------------------
+# Scroll wheel scrolls pane history, click to select a pane, drag a border
+# to resize.
+set -g mouse on
+
+# Drag-select with the mouse copies straight to the macOS clipboard.
+# Bound in both copy-mode tables so it works regardless of mode-keys.
+bind -T copy-mode    MouseDragEnd1Pane send -X copy-pipe-and-cancel "pbcopy"
+bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-pipe-and-cancel "pbcopy"
+
+# --- Quality of life -----------------------------------------------------
+# Drop the ~500ms delay after Esc that interferes with editors.
+set -sg escape-time 10
+
+# Larger scrollback (default is 2000 lines; Claude output is verbose).
+set -g history-limit 50000
+
+# Number windows/panes from 1 (matches the keyboard) and renumber on close.
+set -g base-index 1
+setw -g pane-base-index 1
+set -g renumber-windows on
+
+# Reload this config without restarting tmux.
+bind r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
+
+# True color, so Claude Code's themed output renders correctly.
+set -g default-terminal "tmux-256color"
+set -ag terminal-overrides ",*:RGB"
+
+# --- Running several Claudes ---------------------------------------------
+# Flag a window in the status bar when a background pane produces output,
+# without an interrupting bell or message.
+setw -g monitor-activity on
+set -g visual-activity off
