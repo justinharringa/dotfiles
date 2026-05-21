@@ -20,6 +20,8 @@ _claude_session_target() {
 
   if (( ! no_worktree )) && repo_root=$(git rev-parse --show-toplevel 2>/dev/null); then
     local repo_name=${repo_root:t}
+    # Strip leading dot from repo name to avoid branch name issues (claude/.dotfiles → claude/dotfiles)
+    repo_name=${repo_name#.}
     name=${name:-$repo_name}
     local branch="claude/${name}"
     local worktree_dir="${CLAUDE_WORKTREE_ROOT}/${repo_name}/${name}"
