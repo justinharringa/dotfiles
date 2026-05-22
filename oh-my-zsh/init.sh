@@ -1,6 +1,7 @@
 # oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_TMUX_CONFIG=$HOME/.tmux.conf
 
 plugins=(git colorize kubectl brew macos colored-man-pages docker golang mvn npm sbt urltools aws github rvm ruby gem rake autojump iterm2 1password tmux pyenv gh poetry)
 

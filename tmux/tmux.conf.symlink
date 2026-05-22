@@ -34,3 +34,10 @@ set -ag terminal-overrides ",*:RGB"
 # without an interrupting bell or message.
 setw -g monitor-activity on
 set -g visual-activity off
+
+set -g status-style "fg=colour244,bg=colour236"
+setw -g window-status-activity-style "fg=colour214,bg=colour236"
+set -g window-status-current-style "fg=colour231,bg=colour24,bold"
+set -g window-status-style "fg=colour244,bg=colour236"
+set -g window-status-format " #I:#W#{?window_activity_flag,●,} "
+set -g window-status-current-format " #I:#W#{?window_activity_flag,●,} "
