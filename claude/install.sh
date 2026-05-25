@@ -1,5 +1,5 @@
 #!/bin/sh
-# Install Claude Code statusline configuration
+# Install Claude Code statusline configuration and shared keybindings
 # This is run automatically by script/install
 
 set -e
@@ -7,6 +7,19 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 STATUSLINE_SCRIPT="${SCRIPT_DIR}/statusline.sh"
 SETTINGS_FILE="${HOME}/.claude/settings.json"
+KEYBINDINGS_SRC="${SCRIPT_DIR}/keybindings.json"
+KEYBINDINGS_DST="${HOME}/.claude/keybindings.json"
+
+# --- Keybindings symlink ---------------------------------------------------
+mkdir -p "${HOME}/.claude"
+if [ -L "$KEYBINDINGS_DST" ] && [ "$(readlink "$KEYBINDINGS_DST")" = "$KEYBINDINGS_SRC" ]; then
+  echo "  Claude keybindings already symlinked"
+elif [ -e "$KEYBINDINGS_DST" ] && [ ! -L "$KEYBINDINGS_DST" ]; then
+  echo "  Skipping keybindings: ${KEYBINDINGS_DST} exists and is not a symlink (manual file)"
+else
+  ln -sf "$KEYBINDINGS_SRC" "$KEYBINDINGS_DST"
+  echo "  Linked Claude keybindings: ${KEYBINDINGS_DST} -> ${KEYBINDINGS_SRC}"
+fi
 
 # Ensure statusline script is executable
 chmod +x "$STATUSLINE_SCRIPT"

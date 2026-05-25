@@ -29,6 +29,13 @@ bind r source-file ~/.tmux.conf \; display-message "tmux.conf reloaded"
 set -g default-terminal "tmux-256color"
 set -ag terminal-overrides ",*:RGB"
 
+# Pass extended key sequences (e.g. Shift+Enter) through to pane applications.
+set -g extended-keys on
+set -ag terminal-overrides "*:extkeys"
+
+# Pass OSC 8 hyperlinks through so file paths are clickable in the outer terminal.
+set -g allow-passthrough on
+
 # --- Running several Claudes ---------------------------------------------
 # Flag a window in the status bar when a background pane produces output,
 # without an interrupting bell or message.
