@@ -42,6 +42,14 @@ set -g allow-passthrough on
 setw -g monitor-activity on
 set -g visual-activity off
 
+# Surface the pane title (set by Claude Code via OSC 0/2 with the session
+# summary) in both the tmux window list and the outer Ghostty tab, so we
+# keep Ghostty's auto-rename behavior even when running inside tmux.
+set -g set-titles on
+set -g set-titles-string "#T"
+setw -g automatic-rename on
+setw -g automatic-rename-format "#{?pane_title,#{pane_title},#{pane_current_command}}"
+
 set -g status-style "fg=colour244,bg=colour236"
 setw -g window-status-activity-style "fg=colour214,bg=colour236"
 set -g window-status-current-style "fg=colour231,bg=colour24,bold"
