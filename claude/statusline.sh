@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # Claude Code statusline script
-# Shows: git branch & status | model | context usage | session duration | time
+# Shows: directory | git branch & status | model | context usage | session duration | time
 
 input=$(cat)
 
@@ -10,6 +10,11 @@ used_pct=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
 used_tokens=$(echo "$input" | jq -r '.context_window.used_tokens // 0')
 total_tokens=$(echo "$input" | jq -r '.context_window.total_tokens // 0')
 duration_sec=$(echo "$input" | jq -r '.session.duration_seconds // 0')
+
+# Current working directory (collapse $HOME to ~)
+cwd=$(echo "$input" | jq -r '.workspace.current_dir // .cwd // empty')
+[ -z "$cwd" ] && cwd="$PWD"
+dir="${cwd/#$HOME/~}"
 
 # Git branch and status
 branch=$(git -c core.filesRefLockTimeout=0 rev-parse --abbrev-ref HEAD 2>/dev/null || echo '(no git)')
@@ -63,4 +68,4 @@ fi
 timestamp=$(date +"%H:%M")
 
 # Assemble the statusline
-echo "git:${branch}${git_status} | ${model}${context_bar}${duration} | ${timestamp}"
+echo "dir:${dir} | git:${branch}${git_status} | ${model}${context_bar}${duration} | ${timestamp}"
