@@ -1,0 +1,7 @@
+keybind = cmd+shift+f=write_screen_file:open
+keybind = shift+enter=text:\x1b\r
+
+# Restore windows, tabs, splits, and working dirs on every quit/relaunch.
+# `default` only restores after a forced termination; `always` covers a
+# clean Cmd-Q too. macOS only. Scrollback contents are not restored.
+window-save-state = always
