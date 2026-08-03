@@ -68,3 +68,23 @@ claude-tmux-worktree() {
 
 alias clc='claude-tmux'
 alias clcw='claude-tmux-worktree'
+
+# Nudge about reattachable tmux sessions on shell login. A tmux daemon
+# survives a terminal restart (but not a reboot), so a detached session may
+# be waiting after Ghostty relaunches. Prints only when there's something to
+# reattach to — silent otherwise — so it stays out of the way.
+_tmux_reattach_hint() {
+  emulate -L zsh
+  [[ -n "$TMUX" ]] && return          # already inside tmux; nothing to nudge
+  command -v tmux >/dev/null || return # real binary check (not the omz alias)
+
+  # Sessions with no attached client = safe to reattach to.
+  local detached
+  detached=$(tmux list-sessions -F '#{session_attached} #{session_name}' 2>/dev/null \
+             | awk '$1 == 0 {print $2}')
+  [[ -z "$detached" ]] && return
+
+  print -P "%F{244}tmux: detached session(s) waiting — %F{cyan}clc%f%F{244} to reattach:%f"
+  print -P "%F{244}  ${detached//$'\n'/, }%f"
+}
+_tmux_reattach_hint
