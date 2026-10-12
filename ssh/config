@@ -1,0 +1,16 @@
+# ~/.ssh/config, managed by ~/.dotfiles/ssh (linked by ssh/install.sh).
+#
+# ssh uses the FIRST value it finds for each option, so specific hosts must
+# come before the Host * defaults at the bottom.
+
+# UseKeychain is macOS-only; don't let it break ssh anywhere else.
+IgnoreUnknown UseKeychain
+
+# Per-machine hosts, untracked: homelab addresses, users and ports stay out of
+# this public repo. A missing file is fine.
+Include config.local
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
